@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">实验室管理系统单色标识</title>
+  <desc id="desc">透明背景上的深色烧瓶、W 形液迹与追溯节点。</desc>
+  <path d="M166 314L207 357L254 298L301 357L345 314V402C345 413.598 335.598 423 324 423H187C175.402 423 166 413.598 166 402V314Z" fill="#171513" opacity=".08"/>
+  <path d="M204 116V214L147 367C134 401 155 430 186 430H326C357 430 378 401 365 367L308 214V116" fill="none" stroke="#171513" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M166 314L207 357L254 298L301 357L345 314" fill="none" stroke="#171513" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="345" cy="314" r="11" fill="#171513"/>
+  <circle cx="166" cy="314" r="6" fill="#171513" opacity=".55"/>
+</svg>

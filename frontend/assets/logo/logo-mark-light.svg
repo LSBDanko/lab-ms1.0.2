@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">实验室管理系统反色标识</title>
+  <desc id="desc">暖米色圆角方块中的深色烧瓶、紫色 W 形液迹与橙色追溯节点。</desc>
+  <defs>
+    <linearGradient id="tileLight" x1="52" y1="18" x2="454" y2="494" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFDF8"/>
+      <stop offset=".62" stop-color="#F8F1E5"/>
+      <stop offset="1" stop-color="#EFE4D3"/>
+    </linearGradient>
+    <radialGradient id="haloLight" cx="0" cy="0" r="1" gradientTransform="translate(256 312) rotate(90) scale(190)">
+      <stop offset="0" stop-color="#C9BBFF" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#C9BBFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fluidLight" x1="171" y1="302" x2="342" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8C73EA"/>
+      <stop offset="1" stop-color="#B9A6F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="132" fill="url(#tileLight)"/>
+  <rect x="5.5" y="5.5" width="501" height="501" rx="127" fill="none" stroke="#AA977D" stroke-opacity=".24"/>
+  <circle cx="256" cy="312" r="190" fill="url(#haloLight)"/>
+  <path d="M166 314L207 357L254 298L301 357L345 314V402C345 413.598 335.598 423 324 423H187C175.402 423 166 413.598 166 402V314Z" fill="url(#fluidLight)" opacity=".13"/>
+  <path d="M204 116V214L147 367C134 401 155 430 186 430H326C357 430 378 401 365 367L308 214V116" fill="none" stroke="#171513" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M166 314L207 357L254 298L301 357L345 314" fill="none" stroke="#6B56D8" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="345" cy="314" r="19" fill="#D6804D" opacity=".17"/>
+  <circle cx="345" cy="314" r="11" fill="#D6804D"/>
+  <circle cx="166" cy="314" r="6" fill="#171513" opacity=".52"/>
+</svg>

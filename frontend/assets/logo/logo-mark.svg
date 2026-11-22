@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">实验室管理系统标识</title>
+  <desc id="desc">黑色圆角方块中，一只线条烧瓶包含 W 形液迹与追溯节点。</desc>
+  <defs>
+    <linearGradient id="tile" x1="72" y1="40" x2="440" y2="472" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#24211D"/>
+      <stop offset="0.58" stop-color="#181614"/>
+      <stop offset="1" stop-color="#0F0E0D"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(256 312) rotate(90) scale(190)">
+      <stop offset="0" stop-color="#B6A2FF" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#B6A2FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fluid" x1="170" y1="300" x2="344" y2="424" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D9D0FF"/>
+      <stop offset="1" stop-color="#A891F3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="337" y1="303" x2="353" y2="325" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD9BE"/>
+      <stop offset="1" stop-color="#EBA779"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="132" fill="url(#tile)"/>
+  <rect x="5.5" y="5.5" width="501" height="501" rx="127" fill="none" stroke="#FFFFFF" stroke-opacity=".075"/>
+  <circle cx="256" cy="312" r="190" fill="url(#halo)"/>
+
+  <!-- Liquid volume below the W trace -->
+  <path d="M166 314L207 357L254 298L301 357L345 314V402C345 413.598 335.598 423 324 423H187C175.402 423 166 413.598 166 402V314Z"
+        fill="url(#fluid)" opacity=".11"/>
+
+  <!-- Flask body -->
+  <path d="M204 116V214L147 367C134 401 155 430 186 430H326C357 430 378 401 365 367L308 214V116"
+        fill="none" stroke="#F8F2E7" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- W-shaped trace, referencing Wuyi University -->
+  <path d="M166 314L207 357L254 298L301 357L345 314"
+        fill="none" stroke="#CFC3FF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Trace node -->
+  <circle cx="345" cy="314" r="19" fill="#EBA779" opacity=".16"/>
+  <circle cx="345" cy="314" r="11" fill="url(#accent)" filter="url(#softGlow)"/>
+  <circle cx="166" cy="314" r="6" fill="#F8F2E7" opacity=".62"/>
+
+</svg>

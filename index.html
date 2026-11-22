@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0; url=./frontend/index.html">
+    <title>实验室管理系统 · LAB MS</title>
+    <link rel="icon" href="./frontend/assets/logo/favicon.svg" type="image/svg+xml">
+    <style>
+        * { box-sizing: border-box; }
+        html, body { margin: 0; min-height: 100%; }
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            color: #2d2822;
+            background:
+                radial-gradient(circle at 18% 18%, rgba(197, 183, 255, 0.28), transparent 32%),
+                radial-gradient(circle at 82% 78%, rgba(255, 214, 190, 0.34), transparent 34%),
+                #f4f0e8;
+            font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+        }
+        .entry {
+            width: min(420px, 100%);
+            padding: 34px 32px;
+            border: 1px solid rgba(104, 87, 61, 0.14);
+            border-radius: 24px;
+            background: rgba(255, 253, 249, 0.88);
+            box-shadow: 0 30px 70px rgba(55, 43, 25, 0.12);
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+        .entry img { width: 54px; height: 54px; }
+        .entry h1 { margin: 18px 0 7px; font-size: 23px; letter-spacing: -0.04em; }
+        .entry p { margin: 0; color: #8e8375; font-size: 12px; line-height: 1.8; }
+        .entry a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            margin-top: 22px;
+            padding: 0 20px;
+            border-radius: 999px;
+            color: #fff;
+            background: #191510;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .entry small { display: block; margin-top: 15px; color: #b1a699; font-family: Consolas, monospace; font-size: 9px; letter-spacing: 0.12em; }
+    </style>
+</head>
+<body>
+    <main class="entry">
+        <img src="./frontend/assets/logo/logo-mark.svg" alt="实验室管理系统 Logo">
+        <h1>实验室管理系统</h1>
+        <p>正在进入台账与溯源工作台。<br>如果没有自动跳转，请点击下方按钮。</p>
+        <a href="./frontend/index.html">进入系统</a>
+        <small>WUYI UNIVERSITY · LAB MS</small>
+    </main>
+</body>
+</html>

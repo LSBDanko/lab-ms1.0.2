@@ -1,0 +1,29 @@
+# Python
+backend/.venv/
+backend/__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+
+# Local database and backups
+backend/lab.db
+backend/lab.db.*
+backend/lab.db-*
+backend/*.db-wal
+backend/*.db-shm
+backend/*.db-journal
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local test artifacts
+_edge_profile*/
+_screens*/
+_ui_*_test.js
+
+# Local browser checks
+_*check.js
+_*test.js

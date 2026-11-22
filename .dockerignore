@@ -1,0 +1,12 @@
+.git
+.gitignore
+README.md
+render.yaml
+backend/.venv
+backend/lab.db
+backend/lab.db.*
+backend/lab.db-*
+backend/__pycache__
+**/__pycache__
+*.pyc
+.DS_Store

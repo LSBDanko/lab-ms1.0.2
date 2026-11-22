@@ -1,0 +1,7 @@
+{
+  "envId": "gastric-skunk-d1gn1l6iv2cfab3e2",
+  "$schema": "https://static.cloudbase.net/cli/cloudbaserc.schema.json",
+  "cloudrun": {
+    "name": "lab-ms"
+  }
+}
