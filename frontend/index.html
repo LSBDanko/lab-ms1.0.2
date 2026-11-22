@@ -6331,9 +6331,13 @@ const _configuredApi = (
     ''
 ).trim();
 const _servedByBackend = window.__LAB_SERVED_BY_BACKEND__ === true;
+const _localHost = ['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);
+const _remoteApi = 'https://lab-ms-352114-6-1538467438.sh.run.tcloudbase.com';
 const _fallbackApi = _servedByBackend
     ? window.location.origin
-    : 'http://127.0.0.1:8000';
+    : _localHost || window.location.protocol === 'file:'
+        ? 'http://127.0.0.1:8000'
+        : _remoteApi;
 const API_BASE = (_configuredApi || _fallbackApi).replace(/\/+$/, '');
 let TOKEN = localStorage.getItem('lab_token') || '';
 

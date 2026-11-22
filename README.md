@@ -296,6 +296,55 @@ window.LAB_API_BASE = 'https://你的后端域名';
 - 使用带持久化磁盘的云服务器，或
 - 将 SQLite 换成 PostgreSQL
 
+## 后续更新
+
+当前 `D:\unity games\lab-ms` 已经是连接 `LSBDanko/lab-ms1.0.2` 的 Git 仓库。
+
+修改代码后，直接双击：
+
+```text
+publish.bat
+```
+
+或者在 PowerShell 中运行：
+
+```powershell
+.\publish.ps1
+```
+
+脚本会：
+
+1. 提交当前修改
+2. 推送到 GitHub
+3. 让 GitHub Pages 自动重新发布
+4. 询问是否同时重新部署 CloudBase
+
+只改前端且只用 GitHub Pages 时，CloudBase 可以选择 `N`。  
+如果手机使用的是 CloudBase 直连地址，则选 `y`。
+
+如果只想提交 GitHub、不部署 CloudBase：
+
+```powershell
+.\publish.ps1 -SkipCloudBase
+```
+
+手动流程：
+
+```powershell
+git add -A
+git commit -m "update"
+git push origin main
+
+tcb cloudrun deploy `
+  -e gastric-skunk-d1gn1l6iv2cfab3e2 `
+  -s lab-ms `
+  --port 80 `
+  --source . `
+  --force --yes --wait
+```
+
+注意：CloudBase 容器重启/重新部署后，`/tmp/lab.db` 可能重置。
+
 ## 安全提醒
 
 不要把以下文件提交到公开仓库：
