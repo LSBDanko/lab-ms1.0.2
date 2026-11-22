@@ -7605,9 +7605,34 @@ function checkApiConfiguration() {
     notice.classList.toggle('is-hidden', !(remotePage && localApi));
 }
 
+function useBackendAssets() {
+    if (window.__LAB_SERVED_BY_BACKEND__ === true) return;
+    if (!API_BASE || /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?(\/|$)/i.test(API_BASE)) return;
+
+    const rewrite = root => {
+        if (!root || root.nodeType !== 1) return;
+        if (root.matches && root.matches('img[src^="assets/"]')) {
+            root.src = `${API_BASE}/${root.getAttribute('src')}`;
+        }
+        if (root.querySelectorAll) {
+            root.querySelectorAll('img[src^="assets/"]').forEach(img => {
+                img.src = `${API_BASE}/${img.getAttribute('src')}`;
+            });
+        }
+    };
+
+    rewrite(document.body);
+    new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            mutation.addedNodes.forEach(node => rewrite(node));
+        });
+    }).observe(document.body, { childList: true, subtree: true });
+}
+
 async function boot() {
     bindEvents();
     checkApiConfiguration();
+    useBackendAssets();
     startClock();
     if (!TOKEN) {
         showLogin();
